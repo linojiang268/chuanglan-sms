@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Ouarea\Sms\Chuanglan
+        psr4_prefix: Ouarea\Sms\Chuanglan
+        src_path: src

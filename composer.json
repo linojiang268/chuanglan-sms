@@ -1,0 +1,35 @@
+{
+  "name": "ouarea/chuanglan-sms",
+  "version": "1.0.0",
+  "description": "SMS service implementation with chuanglan as backend",
+  "license": "proprietary",
+  "type": "library",
+
+  "autoload": {
+    "files": [
+      "src/Support/helpers.php"
+    ],
+    "psr-4": {
+      "Ouarea\\Sms\\Chuanglan\\": "src/"
+    }
+  },
+
+  "autoload-dev": {
+  },
+
+  "config": {
+    "preferred-install": "dist"
+  },
+
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+
+  "require": {
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^6.1"
+  },
+
+  "require-dev": {
+    "phpspec/phpspec": "^2.4"
+  }
+}
