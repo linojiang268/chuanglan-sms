@@ -2,7 +2,7 @@
 
 namespace Ouarea\Sms\Chuanglan;
 
-use GuzzleHttp\Clinet;
+use GuzzleHttp\Client;
 use GuzzleHttp\RequestOptions;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
