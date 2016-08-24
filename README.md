@@ -23,7 +23,7 @@ $quota = $service->queryQuota();
 * ``$account``  chuanglan's account used to send message
 * ``$password`` password that goes with account, should be **MD5**'d
 * ``$options``  options for creating a ChuanglanSmsService. Including:
-	* ``name`` name of merchant(e.g., 【XXX】), can be either prepend or append to the message. 
+	* ``name`` name of merchant(e.g., 【XXXX】), can be either prepend or append to the message.
 	* ``affix`` 附加号码 a part of sender's number that will be used to
 	* ``send_url``  url for sending message (typically, you will not change it at all, since there is no other environment prepared by chuanglan currently)
 	* ``quota_url``  url for querying quota (typically, you will not change it at all, since there is no other environment prepared by chuanglan currently)
