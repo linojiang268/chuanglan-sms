@@ -16,13 +16,13 @@ class Service
      * base url for sending short message
      * @var string
      */
-    const SEND_URL = 'http://222.73.117.158/msg/HttpBatchSendSM';
+    const SEND_URL = 'http://222.73.117.156/msg/HttpBatchSendSM';
     
     /**
      * base url for querying quota
      * @var string
      */
-    const QUOTA_URL = 'http://222.73.117.158/msg/QueryBalance';
+    const QUOTA_URL = 'http://222.73.117.156/msg/QueryBalance';
 
     const RESPONSE_PHRASES = [
         '0'   => '提交成功',
