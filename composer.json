@@ -1,6 +1,6 @@
 {
   "name": "ouarea/chuanglan-sms",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "SMS service implementation with chuanglan as backend",
   "license": "proprietary",
   "type": "library",
