@@ -16,13 +16,13 @@ class Service
      * base url for sending short message
      * @var string
      */
-    const SEND_URL = 'http://222.73.117.156/msg/HttpBatchSendSM';
+    const SEND_URL = 'https://sms.253.com/msg/send';
     
     /**
      * base url for querying quota
      * @var string
      */
-    const QUOTA_URL = 'http://222.73.117.156/msg/QueryBalance';
+    const QUOTA_URL = 'https://sms.253.com/msg/balance';
 
     const RESPONSE_PHRASES = [
         '0'   => '提交成功',
@@ -151,7 +151,7 @@ class Service
                                            sprintf('短信额度查询异常(%s)', $response[1])));
         }
 
-        return intval((string)$response[3]);
+        return intval((string)$response[2]);
     }
     
     // send messages in batch
@@ -199,13 +199,12 @@ class Service
     private function buildRequestForSending(array $subscribes, $message, array $options = [])
     {
         return [
-            'account'    => $this->account,
-            'pswd'       => $this->password,
-            'mobile'     => implode(',', $subscribes),
-            'msg'        => $message,
-            'needstatus' => false,
-            // 'product'    => '',
-            'extno'      => $this->getAffix() ?: null,
+            'un'    => $this->account,
+            'pw'    => $this->password,
+            'phone' => implode(',', $subscribes),
+            'msg'   => $message,
+            'rd'    => 0,
+            'ex'    => $this->getAffix() ?: null,
         ];
     }
 
@@ -213,8 +212,8 @@ class Service
     private function buildRequestUrlForConsulting()
     {
         return [
-            'account'    => $this->account,
-            'pswd'       => $this->password,
+            'un' => $this->account,
+            'pw' => $this->password,
         ];
     }
     
