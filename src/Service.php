@@ -124,7 +124,7 @@ class Service
             throw new \InvalidArgumentException('短信内容过长');
         }
         
-        $this->sendMessages((array)$subscriber, $message . $this->getName(), $options);
+        $this->sendMessages((array)$subscriber, $message, $options);
     }
     
     /**
@@ -272,15 +272,5 @@ class Service
     private function getAffix()
     {
         return array_get($this->options, 'affix');
-    }
-
-    /**
-     * get merchant name
-     *
-     * @return string
-     */
-    private function getName()
-    {
-        return array_get($this->options, 'name');
     }
 }
